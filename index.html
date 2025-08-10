@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>icando Support | Help Center</title>
+  <meta name="description" content="Official icando Support: FAQs, troubleshooting, privacy, and contact for the introvert-friendly social skills app." />
+
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://yourusername.github.io/icando/" />
+  <meta property="og:title" content="icando Support | Help Center" />
+  <meta property="og:description" content="Get help with icando: setup, quests, AI chat, troubleshooting, and privacy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/icando/" />
+  <meta property="og:image" content="https://yourusername.github.io/icando/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #12141a;
+      --text: #e6e6e6;
+      --muted: #a8b0bf;
+      --brand: #6ae2b2;
+      --brand-2: #73c1ff;
+      --link: #8fd3ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1080px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fb;
+        --panel: #ffffff;
+        --text: #1a1f2b;
+        --muted: #556070;
+        --link: #0d63a5;
+        --shadow: 0 10px 30px rgba(14, 31, 53, 0.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg), #0d1220 60%);
+      background-attachment: fixed;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* Skip link */
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    .skip-link:focus { left: 20px; top: 20px; width: auto; height: auto; background: #fff; color: #000; padding: 8px 12px; border-radius: 8px; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,12,18,0.6);
+      backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .2px; }
+    .logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow: inset 0 0 0 2px rgba(255,255,255,.15); }
+    .menu a { margin-left: 18px; font-weight: 600; opacity: .9; }
+
+    .hero {
+      padding: 72px 0 36px;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin: 12px 0; }
+    .hero p { color: var(--muted); max-width: 760px; margin: 8px auto 24px; }
+    .cta {
+      display: inline-flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 999px; font-weight: 700; border: 1px solid rgba(255,255,255,.12); box-shadow: var(--shadow); }
+    .btn.primary { background: linear-gradient(135deg,var(--brand),var(--brand-2)); color: #071018; border: none; }
+    .btn.soft { background: rgba(255,255,255,.06); }
+
+    section { padding: 36px 0; }
+
+    .grid {
+      display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr);
+    }
+    .card {
+      grid-column: span 6; background: var(--panel); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.06);
+    }
+    .card h3 { margin: 8px 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    @media (max-width: 880px) { .card { grid-column: span 12; } }
+
+    .kicker { display: inline-block; font-weight: 800; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--brand-2); }
+    h2 { font-size: clamp(22px,3vw,32px); margin: 8px 0 16px; }
+
+    .faq details { background: var(--panel); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,.06); box-shadow: var(--shadow); }
+    .faq summary { font-weight: 700; cursor: pointer; }
+    .faq p { color: var(--muted); margin: 6px 0 0; }
+
+    .contact { display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+    .contact .left { grid-column: span 7; }
+    .contact .right { grid-column: span 5; }
+    @media (max-width: 880px) { .contact .left, .contact .right { grid-column: span 12; } }
+
+    footer { margin-top: 36px; padding: 28px 0 48px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06); background: rgba(0,0,0,.12); }
+    .small { font-size: 14px; color: var(--muted); }
+    .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius: 10px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); }
+    .store-badges { display:flex; gap:12px; flex-wrap:wrap; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; padding:2px 6px; border-radius:6px; background: rgba(255,255,255,.06); }
+  </style>
+
+  <!-- Schema.org FAQ for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is icando?",
+        "acceptedAnswer": {"@type": "Answer", "text": "icando is an introvert-friendly app that teaches and lets you practice social skills through lessons, quests, and AI chat role‑plays."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is icando free?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You can start for free with beginner lessons and practice chats. A paid plan unlocks advanced quests, feedback, and more topics."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact support?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Email support@icando.app. Include your device model, iOS version, and a description of the issue so we can help quickly."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand" aria-label="icando home">
+          <span class="logo" aria-hidden="true"></span>
+          <span>icando <span class="small">Support</span></span>
+        </div>
+        <div class="menu">
+          <a href="#features">Features</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Contact</a>
+          <a href="#privacy">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <span class="kicker">Help Center</span>
+      <h1 id="hero-title">Welcome to icando Support</h1>
+      <p>Everything you need to learn, practice, and get help with icando — the introvert‑friendly social skills app featuring lessons, quests, and AI chat practice.</p>
+      <div class="cta" role="group" aria-label="Primary actions">
+        <a class="btn primary" href="mailto:support@icando.app?subject=Support%20Request%20-%20icando&body=Describe%20the%20issue%20and%20steps%20to%20reproduce.%0A%0ADevice%20model:%0AiOS%20version:%0AApp%20version:%0A%0AScreenshots%20(optional):">
+          Contact Support
+        </a>
+        <a class="btn soft" href="#faq">Read FAQs</a>
+      </div>
+    </section>
+
+    <section class="container" id="features" aria-labelledby="features-title">
+      <span class="kicker">Overview</span>
+      <h2 id="features-title">What you can do with icando</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Courses & Lessons</h3>
+          <p>Structured topics like small talk, active listening, and networking — built for introverts to learn at their own pace.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Quick Key Points</h3>
+          <p>Review essential takeaways in seconds so you can refresh before a meeting or social event.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Real‑World Quests</h3>
+          <p>Step‑by‑step challenges for everyday situations: meeting new people, group chats, or asking good questions.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>AI Chat Practice</h3>
+          <p>Role‑play conversations anytime. Build confidence with supportive, judgment‑free practice.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Instant Feedback</h3>
+          <p>Personalized suggestions and recommendations to improve tone, clarity, and connection.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Privacy‑First</h3>
+          <p>Your practice chats are protected. Learn more in our privacy section below.</p>
+        </article>
+      </div>
+      <div style="margin-top:16px" class="store-badges" aria-label="Download links">
+        <a class="badge" href="#" aria-label="Download on the App Store (coming soon)">
+          <span aria-hidden="true"></span> <strong>App Store</strong>
+        </a>
+        <a class="badge" href="#" aria-label="Visit our GitHub page">
+          <span aria-hidden="true">{ }</span> <strong>GitHub</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="container" id="troubleshooting" aria-labelledby="troubleshooting-title">
+      <span class="kicker">Fix Issues Fast</span>
+      <h2 id="troubleshooting-title">Troubleshooting Steps</h2>
+      <ol>
+        <li>Make sure you’re on the latest version of icando. Check the App Store for updates.</li>
+        <li>Force‑quit and reopen the app. This clears temporary state.</li>
+        <li>If a quest or chat is stuck, switch networks (Wi‑Fi ↔︎ cellular) and try again.</li>
+        <li>Restart your device. Many intermittent issues resolve after a reboot.</li>
+        <li>If problems continue, email <a href="mailto:support@icando.app">support@icando.app</a> with your <span class="code">device model</span>, <span class="code">iOS version</span>, <span class="code">icando version</span>, and screenshots.</li>
+      </ol>
+      <p class="small">Known issues & status: <a href="#status">see status notes</a>.</p>
+    </section>
+
+    <section class="container faq" id="faq" aria-labelledby="faq-title">
+      <span class="kicker">Answers</span>
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is icando?</summary>
+        <p>icando is an introvert‑friendly app to learn and practice social skills using lessons, quick reviews, real‑world quests, and AI chat role‑plays.</p>
+      </details>
+
+      <details>
+        <summary>Is icando free?</summary>
+        <p>You can start for free. A paid plan unlocks additional lessons, advanced quests, and deeper AI feedback.</p>
+      </details>
+
+      <details>
+        <summary>Do I need an account?</summary>
+        <p>You can browse free content without an account. Creating an account syncs progress and enables personalized recommendations.</p>
+      </details>
+
+      <details>
+        <summary>How does AI chat practice work?</summary>
+        <p>Pick a scenario (e.g., “meeting someone new”). The bot role‑plays with you and offers instant feedback on tone, clarity, and empathy.</p>
+      </details>
+
+      <details>
+        <summary>What data does icando collect?</summary>
+        <p>We collect minimal data to operate the app, such as account email and usage analytics. See the privacy section for details and choices.</p>
+      </details>
+
+      <details>
+        <summary>How do I request a refund?</summary>
+        <p>For App Store subscriptions, refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">reportaproblem.apple.com</a> and follow the instructions.</p>
+      </details>
+
+      <details>
+        <summary>Accessibility support</summary>
+        <p>icando supports Dynamic Type, VoiceOver, and prefers‑reduced‑motion. Email us if you encounter issues.</p>
+      </details>
+
+      <details>
+        <summary id="status">Service status & known issues</summary>
+        <p>All systems operational. No major incidents reported. Minor: rare timeouts on poor networks during AI chat; retry usually succeeds.</p>
+      </details>
+    </section>
+
+    <section class="container contact" id="contact" aria-labelledby="contact-title">
+      <div class="left">
+        <span class="kicker">We’re here to help</span>
+        <h2 id="contact-title">Contact Support</h2>
+        <p>If you couldn’t resolve your issue above, send us an email. We typically reply within 1–2 business days.</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:support@icando.app">support@icando.app</a><br />
+          <strong>Twitter/X:</strong> <a href="https://x.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a>
+        </p>
+        <p>
+          When emailing, please include:
+          <ul>
+            <li>Device model and iOS version</li>
+            <li>icando app version (Settings → About)</li>
+            <li>Steps to reproduce the issue</li>
+            <li>Screenshots or screen recording (if possible)</li>
+          </ul>
+        </p>
+        <p>
+          Or start a pre‑filled message: <a class="btn soft" href="mailto:support@icando.app?subject=Support%20Request%20-%20icando&body=Issue%20summary:%0A%0AExpected%20result:%0AActual%20result:%0ASteps%20to%20reproduce:%0AApp%20version:%0AiOS%20version:%0ADevice:%0A">Email Support</a>
+        </p>
+      </div>
+      <aside class="right" aria-labelledby="right-title">
+        <div class="card">
+          <h3 id="right-title">Version & Updates</h3>
+          <p class="small">Current iOS version: <strong>1.0.0</strong> <span aria-hidden="true">•</span> Last updated: <span id="last-updated">—</span></p>
+          <p class="small">Release notes: Initial release with lessons, quests, AI chat, and feedback.</p>
+        </div>
+        <div class="card">
+          <h3>Policies</h3>
+          <p class="small"><a href="#privacy">Privacy Policy</a> • <a href="#terms">Terms of Use</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container" id="privacy" aria-labelledby="privacy-title">
+      <span class="kicker">Your data</span>
+      <h2 id="privacy-title">Privacy Policy (Short)</h2>
+      <p>icando collects only what’s needed to provide the service. This may include an email address for your account, basic analytics, and anonymized usage data to improve features. Conversation data used for AI practice is processed to generate responses and may be retained for a short period to provide feedback and improve quality. We do not sell your data.</p>
+      <p>You can request data deletion at any time by emailing <a href="mailto:privacy@icando.app">privacy@icando.app</a>. For full details, see our full Privacy Policy (coming soon).</p>
+
+      <h3 id="terms">Terms of Use (Summary)</h3>
+      <ul>
+        <li>icando is for educational purposes only; not therapy or medical advice.</li>
+        <li>Do not share sensitive personal information in practice chats.</li>
+        <li>Subscriptions renew automatically unless canceled 24 hours before the end of the period.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="grid">
+        <div class="card" style="grid-column: span 12; background: transparent; border: none; box-shadow: none; padding: 0;">
+          <p class="small">© <span id="year"></span> icando. All rights reserved. Built for introverts finding their voice.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // tiny helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+
+    // smooth scroll (native on most browsers, fallback)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
